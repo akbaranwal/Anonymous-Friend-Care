@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>information</title>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+    
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+<!--     <link rel="stylesheet" type="text/css" href="test.css">
+ --></head>
+<body>
+
+      
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3 >Welcome</h3>
+                        <p >You are few seconds away to report !</p>
+                        
+                    </div>
+                    <div class="row">
+
+                  <form method="post" action="#">
+                 <!--   first box  start  !-->
+                         <div class="row" id="box1">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3> Anonymous Friend Care Reporting</h3>
+                                        <p class="text-primary"> If this will occur in next 24 hours          
+                                                                 Please call 1-800-782-7463 </p>
+                                    </div>
+                                    <div class="card-body">
+                                            <p class="text-primary"> Is this a college incident ?  </p>
+                                            <div class="row align-items-center remember" >
+                                                <input type="radio" name="college_incident" value="yes"  id="college_incident">Yes
+                                            </div>
+
+                                            <div class="row align-items-center remember">
+                                                <input type="radio" name="college_incident" value="no"  >No
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" value="next" class="btn float-right login_btn" onclick="func1(event)" >
+                                            </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                <!--  first box ends  !-->
+
+                <!--  2nd box starts !-->
+                            <div class="row" id="box2">
+                                     <div class="col-md-9 register-right">
+                              <!--  crime place info start -->
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                <h3 class="register-heading text-primary">Only complete this form if your incident involve a college, student or teacher</h3>
+                                                <div class="row register-form">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="college" placeholder="Name of College *" value="" id="college"/>
+                                                        </div>
+                                                        <div class="form-group">
+                                                        <small class="text-primary">College Address</small>
+                                                            <input type="text" name="address" class="form-control" placeholder="Street Adress *" value="" id="address" />
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" name="city" class="form-control" placeholder="City *" value=""  id="city"/>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" name="zipcode" minlength="6" class="form-control"  placeholder="Zip Code *" id="zipcode" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+                                                                <option class="hidden"  selected disabled>State</option>
+                                                                <option>Madhya Pradesh</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Student's Full Name *" value="" name="criminal" id="criminal"/>
+                                                            <small class="text-primary">Enter the Student's name you are reporting</small>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"  placeholder="Student's Branch *" value="" name="branch" id="branch" />
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="type_of_crime" id="type_of_crime">
+                                                                <option class="hidden"  >Type Of Incident</option>
+                                                                <option>Assault</option>
+                                                                <option>Bullying</option>
+                                                                <option>Vandalism</option>
+                                                                <option>Trespassing</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                        </div>
+                                                        
+                                        <input type="submit" class="btn float-right login_btn"  value="next" onclick="func2(event)" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                    <!--  crime place info end -->
+                                </div>    
+
+                            <!--  2nd box end  !-->
+
+
+                        <!--     3rd box start    --> 
+                       <div class="row" id="box3">
+                            <div class="container">
+                                <div class="d-flex justify-content-center h-100">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3>Incident/Crime Description</h3>
+                                            <p class="text-primary"> Please enter as much information as possible </p>
+                                        </div>
+                                        <div class="card-body">
+                                            
+                            <!--  Description of incident -->                
+                                                <p class="text-primary"> Description of the crime or incident </p>
+                                                 <input type="text" class="form-control" name="description" id="description" placeholder="Incident/Crime Description *" value="" />
+
+
+                                                <p class="text-primary"> How do you hear about  this? </p>
+                                                    <select class="form-control" name="reach_us" id="reach_us">
+                                                        <option >select</option>
+                                                           <option>Bookmark</option>
+                                                            <option>Community Poster</option>
+                                                            <option>School Poster</option>
+                                                            <option>Google</option>
+                                                            <option>Newspaper</option>
+                                                            <option>Welfare Office</option>
+                                                   </select>
+
+                            <!-- for Reward   -->
+                                                    <p class="text-primary"> Do you want a reward?</p>                                     
+
+                                                <div class="row align-items-center remember" >
+                                                    <input type="radio" name="reward" id="reward">Yes
+                                                </div>
+
+                                                <div class="row align-items-center remember">
+                                                    <input type="radio" name="reward" >No
+                                                </div>
+
+                                                <div class="form-group">
+                                            <input type="submit" value="next" class="btn float-right login_btn" onclick="func3(event)">  
+                                                </div>
+                                           
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                                <!--   3rd box end    --> 
+
+                                <!-- 4th box start -->
+                        <div class="row" id="box4">
+                            
+                            <div class="container">
+                                <div class="d-flex justify-content-center h-100">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3>Thank You - Please Save this Code</h3>
+                                    <p class="text-primary"> You will need to provide this code when checking status of your report  </p>
+                                        </div>
+                                
+                    <!-- code generate  -->                        
+                                    <div class="card-body">
+                                        <p class="text-primary"> Please keep this code in a safe place:</p>
+                                        <p id="code" >generating code..</p>
+                                        <div class="form-group">
+
+                                            <div class="form-group">
+                                            <input type="submit" value="next" class="btn float-right login_btn" onclick="func4(event)">  
+                                            </div>
+                                                      
+   <!--                                                 <input type="submit" value="back" class="btn float-right login_btn">
+ -->                                    
+                                    </div>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        </div>
+                                <!-- 4th box end -->
+
+
+                       </form>
+                    </div>
+                </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
